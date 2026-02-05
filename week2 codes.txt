@@ -1,0 +1,68 @@
+#Count frequency of elements
+li = [1,2,3,4,5,6,1,1,2,5]
+dic ={}
+
+for i in li:
+    if i in dic:
+        dic[i]+=1
+    else:
+        dic[i]=1
+        
+print(dic)
+
+
+#Reverse strings
+
+st = "hii, My name is Neel"
+print("Normal reverse : ",st[::-1])
+
+print("reverse by word")
+l = st.split()
+out=""
+for i in l[::-1]:
+    out+=' '+i
+    
+print(out.strip())
+
+
+#Reverse Number
+
+num = 123
+rev = 0
+while num>0:
+    rem = num%10
+    rev = rev*10+rem
+    num = num//10
+print(rev)
+
+
+
+#Find duplicates
+
+li=[1,2,3,4,5,6,7,2,3,6]
+single = []
+dupli =[]
+
+for i in li:
+    if i in single:
+        dupli.append(i)
+    else:
+        single.append(i)
+        
+print(dupli)
+
+
+
+#Date difference calculator
+import datetime
+
+date1 = input("Enter date in YYYY:MM:DD formate : ")
+date2 = input("Enter date in YYYY:MM:DD formate : ")
+
+date1 = datetime.datetime.strptime(date1,"%Y:%m:%d")
+date2 = datetime.datetime.strptime(date2,"%Y:%m:%d")
+
+print(date1-date2)
+
+
+
