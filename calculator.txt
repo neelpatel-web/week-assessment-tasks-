@@ -1,0 +1,74 @@
+while True:
+    print("select your operation : ")
+    print("1. Unary")
+    print("2. Binary")
+    print("3. press 3 to exit...")
+    
+    ip = input()
+    if ip=="binary" or ip=="2" or ip=="Binary":
+        a = input("Enter first value : ")
+        if a.isnumeric():
+            a = int(a)
+            
+            print("1. +")
+            print("2. -")
+            print("3. *")
+            print("4. /")
+            print("5. %")
+            op = input("select operation : ")
+            
+            b = input("Enter second value : ")
+            if b.isnumeric():
+                b=int(b)
+            
+                match op:
+                    case "1"| "+":
+                        print(a+b)
+                    case "2" | "-":
+                        print(a-b)
+                    case "3" | "*":
+                        print(a*b)
+                    case "4" | "/":
+                        print(a/b)
+                    case "5" | "%":
+                        print(a%b)
+                    case _:
+                        print("Enter correct value..")
+                        pass
+            else:
+                print("enter valid value...")
+                pass
+                
+        else:
+            print("enter valid value...")
+            pass
+            
+        
+    elif ip=="unary" or ip=="1" or ip=="Unary":
+        
+        a = input("Enter value : ")
+        if a.isnumeric():
+            a = int(a)
+            
+            print("select operation : ")
+            print("1. ++")
+            print("2. --")
+            op = input("select operation : ")
+            
+            match op:
+                case "1" | "++":
+                    print(a+1)
+                case "2" | "--":
+                    print(a-1)
+                case _:
+                    print("Enter correct value..")
+                    pass
+        else:
+            print("enter valid value...")
+            pass
+                
+    elif ip=="3":
+        break
+    
+    else:
+        print("pls select valid operation...")

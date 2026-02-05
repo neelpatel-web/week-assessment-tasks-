@@ -1,0 +1,7 @@
+print("Enter the celsius value : ")
+c = input()
+if c.isnumeric():
+    c = int(c)
+    print("Fahrenheit value for provided celsius : ",c*(9/5)+32)
+else:
+    print("Enter valid value")

@@ -1,0 +1,48 @@
+distance = {
+    'm':1,
+    'km':0.001,
+    'cm':100
+}
+
+print("Enter value for your distance : ")
+val = input()
+if val.isnumeric():
+    val = int(val)
+    unit = ''
+    funit = ''
+    
+    while unit not in ['km','m','cm']:
+        print()
+        print("select unit for your provided value : ")
+        print("km")
+        print("m")
+        print("cm")
+        
+        unit = input().lower()
+        
+        if unit in ['km','m','cm']:
+            val /=distance[unit]
+        else:
+            print("not valid input...")
+            print()
+            
+    while funit not in ['km','m','cm']:
+        print()
+        print("select the unit that you want you value in : ")
+        print("km")
+        print("m")
+        print("cm")
+        
+        funit = input().lower()
+        
+        if funit in ['km','m','cm']:
+            val *=distance[funit]
+            print()
+            print("answer : ",val)
+        else:
+            print("not valid input...")
+            print()
+        
+else:
+    print("not valid input..")
+    
